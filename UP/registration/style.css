@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Контейнер для форм */
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* Заголовки форм */
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #2e7d32;
+    font-size: 24px;
+}
+
+/* Группы полей формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Стили для всех текстовых полей ввода */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+/* Убрал красные рамки при фокусе */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-color: #ddd; /* Оставил серый цвет */
+    outline: none;
+}
+
+/* Стили для чекбокса "Запомнить меня" */
+.remember {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember input {
+    margin-right: 10px;
+    width: auto;
+}
+
+/* Стили для кнопок */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #388e3c;
+}
+
+/* Убрал стили для невалидных полей */
+input:invalid {
+    border-color: #ddd; /* Серый цвет вместо красного */
+}
+
+/* Ссылки между формами */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивные стили */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        margin: 0 15px;
+        width: calc(100% - 30px);
+    }
+    
+    body {
+        padding: 15px;
+        height: auto;
+        min-height: 100vh;
+        align-items: flex-start;
+    }
+}

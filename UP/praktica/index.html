@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>МФЦ Трёхгорный</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Логотип МФЦ" class="logo">
+      <h1>Многофункциональный центр</h1>
+    </div>
+  </header>
+  <nav class="menu">
+    <button onclick="window.location.href='../login/login.html'">Войти</button>
+     <button onclick="window.location.href='../registration/index.html'">Регистрация</button>
+    <button>Услуги</button>
+    <button>Сотрудники</button>
+    <button>О сайте</button>
+  </nav>
+  </header>
+
+  <!-- Слайдер -->
+  <section class="slider">
+    <div class="slide fade">
+      <img src="images/sl1.png" alt="Саайд 1">
+    </div>
+    <div class="slide fade">
+      <img src="images/sl2.png" alt="Слайд 2">
+    </div>
+    <div class="slide fade">
+      <img src="images/sl3.png" alt="Слайд 3">
+    </div>
+    <!-- Кнопки переключения -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </section>
+  <!-- Услуги -->
+  <section class="services">
+    <h2>Услуги</h2>
+    <div class="services-container">
+
+      <div class="service-card">
+        <h3>Регистрация прав на недвижимость</h3>
+        <img src="images/us1.png" alt="Регистрация">
+        <p>Помощь в оформлении документов для регистрации собственности на жильё, земельные участки и другие объекты
+          недвижимости.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Социальные выплаты и субсидии</h3>
+        <img src="images/ul2.png" alt="Субсидии">
+        <p>Консультации и помощь в оформлении заявлений на получение различных социальных пособий и субсидий.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Оформление паспортов и документов</h3>
+        <img src="images/us3.png" alt="Паспорта">
+        <p>Помощь в получении или замене паспорта, а также в оформлении различных удостоверений личности и документов.
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <!-- Наши сотрудники -->
+  <section class="staff">
+    <h2>Наши сотрудники</h2>
+    <div class="staff-list">
+      <div class="person"><img src="images/st1.png" alt="">
+        <p>Анна Александровна Петрова</p>
+      </div>
+      <div class="person"><img src="images/st2.png" alt="">
+        <p>Елена Викторовна Смирнова</p>
+      </div>
+      <div class="person"><img src="images/st3.png" alt="">
+        <p>Мария Сергеевна Кузнецова</p>
+      </div>
+      <div class="person"><img src="images/st4.png" alt="">
+        <p>Ольга Дмитриевна Иванова</p>
+      </div>
+      <div class="person"><img src="images/st5.png" alt="">
+        <p>Татьяна Николаевна Васильева</p>
+      </div>
+      <div class="person"><img src="images/st56.png" alt="">
+        <p>Дмитрий Андреевич Сидоров</p>
+      </div>
+    </div>
+  </section>
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="footer-column">
+      <h4>О сайте</h4>
+      <p>Администрация: г. Трёхгорный, ул. Мира 6<br>
+        456080, Челябинская область</p>
+      <p>Телефон: +7 (35191) 6-20-52</p>
+      <p>Email: <a href="mailto:mfc@admin.ru">mfc@admin.ru</a></p>
+
+      <div class="social-icons">
+        <img src="images/vk.png" alt="VK">
+        <img src="images/tg.png" alt="Telegram">
+        <img src="images/odn.png" alt="OK">
+      </div>
+    </div>
+
+    <div class="footer-column right">
+      <h4>Баннерная сеть</h4>
+      <div class="banner-logos">
+        <img src="images/gos.png" alt="Баннер 1">
+        <img src="images/chlb.png" alt="Баннер 2">
+        <img src="images/duma4.png" alt="Баннер 3">
+        <img src="images/pf.png" alt="Баннер 4">
+        <img src="images/ufo.png" alt="Баннер 5">
+        <img src="images/pr.png" alt="Баннер 6">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2016–2025 Официальный сайт органов местного самоуправления города Трёхгорного</p>
+    </div>
+  </footer>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+
+</html>
